@@ -1,4 +1,8 @@
-function totalLength<T extends { length: number }>(x: T, y: T) {
+interface IHaveALength {
+    length: number;
+}
+
+function totalLength<T extends IHaveALength>(x: T, y: T) {
     var total: number = x.length + y.length;
     return total;
 }
