@@ -29,3 +29,18 @@ pair2.getValue();
 let pair3 = new KeyValuePair<number, string>(3, 'Third');
 pair3.getKey();
 pair3.getValue();
+
+
+class KeyValuePairPrinter<T, U> {
+    constructor(private paris: KeyValuePair<T, U>[]) {}
+
+    print() {
+        for(let p of this.paris) {
+            console.log(`${p.key}: ${p.value}`);
+        }
+    }
+}
+
+// var printer = new KeyValuePairPrinter([ pair1, pair2 ]);  // fail -> pair1 & pair2 are not the same type
+var printer = new KeyValuePairPrinter([ pair1, pair3 ]);
+printer.print();
