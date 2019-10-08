@@ -16,7 +16,7 @@ namespace TodoApp.Model {
 }
 
 namespace DataAccess {
-    
+
     import Model = TodoApp.Model;
     import Todo = Model.Todo;
 
