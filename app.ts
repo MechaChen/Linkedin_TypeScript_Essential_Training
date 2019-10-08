@@ -7,5 +7,6 @@ function totalLength<T extends IHaveALength>(x: T, y: T) {
     return total;
 }
 
-var length = totalLength('Jess', [1,2,3]);
-var length = totalLength('Jess', ' Mith');
+class CustomArray<T> extends Array<T> {}
+
+var length = totalLength([1, 2], new CustomArray());
